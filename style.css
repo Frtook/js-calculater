@@ -1,0 +1,59 @@
+.main{
+  width: 400px;
+  height: 500px;
+  background-color: rgb(107, 99, 99);
+  margin: 50px auto ;
+  border-radius:20px ;
+}
+.input{
+  display: flex;
+  justify-content: space-between;
+}
+input{
+  margin: 40px 0 0 ;
+  width: 370px;
+  background-color: inherit;
+  color: white;
+  font-size: 40px;
+  border: none;
+  text-align: right;
+  pointer-events: none;
+}
+input:focus{
+  outline: none;
+}
+hr{
+  margin: 40px 0 0 0;
+  border: 1px solid rgb(123 116 116);
+}
+
+.row{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.row button {
+  width: calc((400px / 4) - 40px);
+  height:calc((400px / 4) - 40px);
+  margin: 10px 20px 0 20px ;
+  background-color: inherit;
+  color: orange;
+  border: none;
+  font-size: 25px;
+
+}
+.row .number{
+  color: white ;
+}
+.row .hide{
+  visibility: hidden;
+}
+button:hover{
+  transition-delay: 0.1s;
+  background-color: rgb(129, 122, 122);
+}
+#equ{
+  background-color: orange;
+  color: white;
+  border-radius: 50%;
+}
