@@ -33,9 +33,11 @@ function c(){
   }
 }
 function equ(){
-  document.getElementById('input').value =eval(arr.join(''))
-  for(let i =0 ; i<arr.length;i++){
-    arr.pop()
+  if(arr.length>0){
+    document.getElementById('input').value =eval(arr.join(''))
+    for(let i =0 ; i<arr.length;i++){
+      arr.pop()
+    }
   }
 }
 function del(){
