@@ -6,6 +6,7 @@ function print_input(){
   }
   else{
   document.getElementById('input').value=arr.join('')
+  console.log(arr);
   }
 }
 function number(num){
@@ -25,23 +26,31 @@ else{
 
 }
 function c(){
+  isdot=true
   document.getElementById('input').value='0'
-  let counter = arr.length
-  while (counter !=0){
-    arr.pop()
-    counter-=1
-  }
+  arr=[]
 }
 function equ(){
   if(arr.length>0){
-    document.getElementById('input').value =eval(arr.join(''))
-    for(let i =0 ; i<arr.length;i++){
-      arr.pop()
+    x=eval(arr.join(''))
+    document.getElementById('input').value =x
+   arr=[]
+   if(String(x).length>1){
+    for(let i = 0; i<String(x).length ;i++){
+      arr.push(String(x)[i])
     }
+   }
+   else{
+    arr.push(String(x))
+   }
   }
+
+  console.log(x);
 }
 function del(){
-  arr.pop()
+  if(arr.pop()=="."){
+    isdot=true
+  }
   print_input()
 }
 function dot(){
